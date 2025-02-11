@@ -28,4 +28,8 @@ public class SerieService {
     public List<SerieDTO> obterTop5Series() {
         return converteDados(repositorio.findTop5ByOrderByAvaliacaoDesc());
     }
+
+    public List<SerieDTO> obterLancamentos() {
+        return converteDados(repositorio.findTop5ByOrderByEpisodiosDataLancamentoDesc());
+    }
 }
